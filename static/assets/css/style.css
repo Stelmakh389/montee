@@ -1,0 +1,281 @@
+body {
+  font-family: "Montserrat", sans-serif;
+  padding: 0;
+  margin: 0;
+  overflow-x: hidden;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+main .main_section {
+  max-width: 1500px;
+  width: 100%;
+  padding-left: 20px;
+  padding-right: 20px;
+  box-sizing: border-box;
+  display: flex;
+  height: 600px;
+  position: relative;
+}
+main .main_section .left_section {
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  max-width: 50%;
+  width: 100%;
+  justify-content: center;
+}
+main .main_section .left_section .bg {
+  opacity: 0.2;
+  display: flex;
+  max-width: 500px;
+  width: 100%;
+  position: absolute;
+  left: -200px;
+  top: 30%;
+  z-index: -1;
+}
+main .main_section .left_section .zag_block {
+  font-size: 35px;
+}
+main .main_section .left_section .zag_block span {
+  margin-left: 10px;
+  background: #559D11;
+  padding: 10px 20px;
+  border-radius: 30px;
+  color: white;
+  font-size: 16px;
+  white-space: nowrap;
+}
+main .main_section .left_section .adv_cont {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  margin-top: 40px;
+}
+main .main_section .left_section .adv_cont .adv_zag {
+  margin-right: 20px;
+  margin-top: 0;
+  font-weight: 700;
+}
+main .main_section .left_section .adv_cont .adv_block {
+  display: flex;
+  width: 300px;
+  align-items: center;
+}
+main .main_section .left_section .adv_cont .adv_block span {
+  width: 106px;
+  font-size: 14px;
+  margin-left: 10px;
+  margin-right: 10px;
+}
+main .main_section .left_section .button_block {
+  display: flex;
+  align-items: center;
+  margin-top: 40px;
+}
+main .main_section .left_section .button_block .button {
+  font-size: 16px;
+  text-decoration: none;
+  background: #559D11;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0px 40px;
+  height: 55px;
+  border-radius: 8px;
+  margin-right: 20px;
+  cursor: pointer;
+}
+main .main_section .left_section .button_block .test {
+  display: flex;
+  align-items: center;
+}
+main .main_section .left_section .button_block .test span {
+  width: 232px;
+  font-size: 14px;
+  margin-right: 10px;
+}
+main .main_section .left_section .button_block .test img {
+  display: flex;
+  width: 50px;
+  height: auto;
+}
+main .main_section .right_section {
+  display: flex;
+  max-width: 50%;
+  width: 100%;
+}
+main .main_section .right_section .swiper {
+  width: 100%;
+  height: 100%;
+}
+main .main_section .right_section .swiper-slide {
+  text-align: center;
+  font-size: 18px;
+  background: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+main .main_section .right_section .swiper-slide img {
+  border-radius: 20px;
+  display: block;
+  max-width: 490px;
+  width: 100%;
+  height: auto;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.marq {
+  display: flex;
+  width: 100%;
+  height: auto;
+  background: #559D11;
+  margin-top: 100px;
+}
+.marq div {
+  font-size: 25px;
+  margin-left: 50px;
+  color: white;
+  animation: marquee 15s infinite linear;
+  font-size: sans-serif;
+  line-height: 1.3;
+  padding: 20px 0;
+  white-space: nowrap;
+  display: flex;
+  align-items: center;
+}
+.marq div::before {
+  content: "";
+  margin-right: 50px;
+  width: 15px;
+  position: relative;
+  height: 15px;
+  background: white;
+  border-radius: 100px;
+}
+@keyframes marquee {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+@media screen and (max-width: 1500px) {
+  main .main_section .left_section .adv_cont .adv_block span {
+    width: auto;
+  }
+}
+@media screen and (max-width: 1350px) {
+  main .main_section .right_section {
+    display: flex;
+    max-width: 33%;
+    width: 100%;
+  }
+  main .main_section .left_section .button_block .button {
+    padding: 0px 20px;
+    font-size: 14px;
+  }
+  .main_section {
+    justify-content: space-between;
+    height: 470px;
+  }
+}
+@media screen and (max-width: 1023px) {
+  main .main_section .left_section, main .main_section .right_section {
+    width: 100%;
+    max-width: 100%;
+  }
+  main .main_section .right_section {
+    margin-top: 100px;
+  }
+  .main_section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  main .main_section .left_section .zag_block {
+    text-align: center;
+  }
+  main .main_section .left_section .button_block {
+    justify-content: center;
+    align-items: center;
+  }
+  main .main_section {
+    height: auto;
+  }
+}
+@media screen and (max-width: 720px) {
+  main .main_section .left_section .adv_cont {
+    flex-wrap: wrap;
+  }
+  main .main_section .left_section .adv_cont .adv_block {
+    width: 170px;
+  }
+}
+@media screen and (max-width: 500px) {
+  .main .main_section .left_section .adv_cont .adv_zag {
+    margin-right: 0;
+  }
+  main .main_section .left_section .adv_cont .adv_block span {
+    font-size: 12px;
+  }
+  main .main_section .left_section .adv_cont .adv_block img {
+    width: 40px;
+    height: auto;
+  }
+  main .main_section .left_section .adv_cont .adv_block {
+    width: 126px;
+    margin-right: 10px;
+  }
+  .adv_zag {
+    display: flex;
+    width: 100%;
+    margin-bottom: 20px;
+  }
+  main .main_section .left_section .button_block .test span {
+    font-size: 12px;
+    width: 200px;
+  }
+  main .main_section .left_section .button_block {
+    flex-direction: column;
+  }
+  main .main_section .left_section .zag_block {
+    font-size: 25px;
+    flex-wrap: wrap;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  main .main_section .left_section .zag_block span {
+    font-size: 16px;
+    margin-top: 10px;
+  }
+  main .main_section .right_section {
+    margin-top: 40px;
+  }
+  main .main_section .left_section .adv_cont .adv_block {
+    margin-bottom: 10px;
+  }
+  main .main_section .left_section .adv_cont {
+    margin-top: 0px;
+  }
+  main .main_section .left_section .button_block .test {
+    margin-top: 10px;
+  }
+  .marq div {
+    font-size: 20px;
+  }
+  .marq {
+    margin-top: 40px;
+  }
+}/*# sourceMappingURL=style.css.map */

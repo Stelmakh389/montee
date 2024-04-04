@@ -1,0 +1,27 @@
+{% extends "base.html" %}
+
+{% block content %}
+{% load static %}
+<section class="tiles">
+    {% for item in page_obj %}
+    <article class="style{{ range|random }}">
+        <span class="image">
+            {% with item.photos.all|first as photo %}
+                <img src="{{ photo.image.url }}" alt="">
+            {% endwith %}
+        </span>
+        <a href="{% url 'store:item_details' item.slug %}">
+            <div class="tag">
+                <object> 
+                    {% for tag in item.tags.all %}
+                        <a href="{% url 'store:tag_details' tag.slug %}" style="color: white">{{ tag }}</a>
+                        {% if not forloop.last %},{% endif %}
+                    {% endfor %}
+                </object><br />
+            </div>
+            <h2>{{ item.title }}</h2>
+        </a>
+    </article>
+    {% endfor %}
+</section>
+{% endblock %} 

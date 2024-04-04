@@ -1,0 +1,33 @@
+{% load static %}
+{% block content %}
+<header>
+        <div class="header_top">
+            <a class="logo" href="{% url 'store:home' %}">
+                <img src="{% static "images/logo.svg" %}" alt="">
+            </a>
+            <div class="soc">
+                <a class="telegram" href="#"><img src="{% static "images/telegram.svg" %}" alt=""></a>
+                <a class="whatsapp" href="#"><img src="{% static "images/whatsapp.svg" %}" alt=""></a>
+                <span>Задать вопрос в 1 клик</span>
+            </div>
+            <span class="working">
+                Работаем с 10:00<br>до 20:00 по МСК            
+            </span>
+            <div class="contact">
+                <a id="tel" href="tel:+74951395942" class="tel">+7(495)139-59-42</a>
+                <a href="mailto:info@montee-pro.ru" class="mail">info@montee-pro.ru</a>
+            </div>
+            <a href="#" class="callback open-popup">Перезвоните мне</a>
+        </div>
+        <nav class="header_bottom">
+            <ul class="menu">
+                <li><a href="#">Аренда</a></li>
+                <li><a href="#">Продажа</a></li>
+                <li><a href="#">Доставка и сервис</a></li>
+                <li><a href="#">Б/У Техника</a></li>
+                <li><a href="#">Отзывы</a></li>
+                <li><a href="#">Контакты</a></li>
+            </ul>
+        </nav>
+    </header>
+{% endblock %}

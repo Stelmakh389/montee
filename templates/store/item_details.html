@@ -1,0 +1,72 @@
+{% extends "base.html" %}
+{% block content %}
+{% load static %}
+<main>
+    <section class="main_section">
+        <div class="left_section">
+            <h1 class="zag_block">{{ item.title }}<span>В наличии от {{ item.price }} руб. / сут</span></h1>
+            <div class="adv_cont">
+                <span class="adv_zag">Подходит для:</span>
+                <div class="adv_block">
+                    <img src="{% static "/images/one.svg" %}" alt="">
+                    <span>Высотных работ</span>
+                </div>
+                <div class="adv_block">
+                    <img src="{% static "/images/two.svg" %}" alt="">
+                    <span>Работ в помещении</span>
+                </div>
+                <div class="adv_block">
+                    <img src="{% static "/images/three.svg" %}" alt="">
+                    <span>Работ в узком пространстве</span>
+                </div>
+            </div>
+            <div class="button_block">
+                <a class="button open-quiz" href="#">Рассчитать стоимость</a>
+                <div class="test">
+                    <span>Пройдите тест <b>из 5 вопросов</b> и узнайте стоимость аренды подъемника и доставки до вас</span>
+                    <img src="{% static "/images/time.png" %}" alt="">
+                </div>
+            </div>
+            <img class="bg" src={% static "/images/bg.png" %} alt="">
+        </div>
+        <div class="right_section">
+        {% if item.photos %}
+            <div style="--swiper-navigation-color: #559D11; --swiper-pagination-color: #559D11" class="swiper mySwiper">
+                <div class="swiper-wrapper">
+                    {% for photo in item.photos.all %}
+                        <div class="swiper-slide"><img src="{{ photo.image.url }}" alt=""></div>
+                    {% endfor %}
+                </div>
+                <div class="swiper-pagination"></div>
+              </div>
+        {% else %}
+            <p><span class="image left"><img src="{% static "images/pic14.jpg" %}" alt="" />
+        {% endif %}
+        </div>
+    </section>
+    <section class="marq">
+        <div>Доставка в день обращения по Москве и МО</div>
+        <div>Доставка в день обращения по Москве и МО</div>
+        <div>Доставка в день обращения по Москве и МО</div>
+        <div>Доставка в день обращения по Москве и МО</div>
+        <div>Доставка в день обращения по Москве и МО</div>
+        <div>Доставка в день обращения по Москве и МО</div>
+    </section>
+</main>
+<script type="text/javascript">
+    const mediaQuery = window.matchMedia('(max-width: 500px)')
+    if (mediaQuery.matches) {
+        document.getElementById('tel').innerHTML="Позвонить";
+    }
+</script>
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+<script>
+  var swiper = new Swiper(".mySwiper", {
+    spaceBetween: 30,
+    pagination: {
+      el: ".swiper-pagination",
+      clickable: true,
+    },
+  });
+</script>
+{% endblock %}

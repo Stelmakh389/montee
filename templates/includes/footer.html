@@ -1,0 +1,55 @@
+{% load static %}
+{% block content %}
+<footer>
+</footer>
+<div class="popup__bg">
+        <form id="callback" class="popup telegram-form">
+            <img src="{% static "images/close.svg" %}" class="close-popup popup-popup">
+            <p class="zag_form">Оставьте заявку!</p>
+            <p class="descr_form">Мы скоро свяжемся с вами.</p>
+            <input type="tel" name="phone" id="phone" class="phone" placeholder="+7(___)___-__-__"/>
+            <div class="check_privacy">
+                <input type="checkbox" checked name="accept"/>
+                <p>Я ознакомлен(-а) с <a href="http://site.ru/privacy.html" target="_blank">Политикой конфиденциальности</a></p>
+            </div>
+            <input class="btn" type="submit" name="submit" value="Отправить">
+        </form>
+</div>
+<div class="popup__bg__quiz">
+        <form id="quiz" class="quiz">
+            <div class="progress-bar">
+                <div id="steps" class="step-one"></div>
+            </div>
+            <img src="{% static "images/close-white.svg" %}" class="close-popup popup-quiz">
+            <img class="separ" src="{% static "images/check_photo.jpg" %}" alt="">
+            <div id="quiz_cont" class="quiz_cont active">
+                <p id="question" class="zag_quiz">На какую сумму требуется чек?</p>
+                <ul>
+                    <li class="submit">
+                    <input type="radio" id="a" name="answer" class="answer" value="до 100 000 руб." />
+                    <label for="a" id="a_text">До 100 000 руб.</label>
+                </li>
+                <li class="submit">
+                    <input type="radio" id="b" name="answer" class="answer"  value="от 100 000 руб."/>
+                    <label for="b" id="b_text">От 100 000 руб.</label>
+                </li>
+                <li class="submit">
+                    <input type="radio" id="c" name="answer" class="answer"  value="Свой вариант"/>
+                    <label for="c" id="c_text">Свой вариант</label>
+                </li>
+                </ul>
+            </div>
+
+            <div id="form_block" class="four_block">
+                <p class="zag_quiz">Остался последний шаг!</p>
+                <p class="descr_quiz">Оставьте заявку! Наши менеджеры перезвонят вам и рассчитают стоимость чека под вашу задачу.</p>
+                <input type="tel" name="phone" id="phone" class="phone" placeholder="+7(___)___-__-__"/>
+                <div class="check_privacy">
+                    <input type="checkbox" checked name="accept"/>
+                    <p>Я ознакомлен(-а) с <a href="http://site.ru/privacy.html" target="_blank">Политикой конфиденциальности</a></p>
+                </div>
+                <input class="btn" type="submit" name="submit" value="Отправить">
+            </div>
+        </form>
+</div>
+{% endblock %}

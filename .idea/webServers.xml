@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="WebServers">
+    <option name="servers">
+      <webServer id="e8a65ead-bcc9-48a9-bcc9-fee826e4906f" name="Monte" url="http://montee-rent.ru/">
+        <fileTransfer rootFolder="/home/m/monteetn" accessType="SFTP" host="monteetn.beget.tech" port="22" sshConfigId="c77318ac-a13e-4d4f-987d-987f00948de7" sshConfig="monteetn_1@monteetn.beget.tech:22 password">
+          <advancedOptions>
+            <advancedOptions dataProtectionLevel="Private" keepAliveTimeout="0" passiveMode="true" shareSSLContext="true" />
+          </advancedOptions>
+        </fileTransfer>
+      </webServer>
+    </option>
+  </component>
+</project>
